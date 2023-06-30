@@ -1,5 +1,5 @@
 /* eslint-disable max-classes-per-file */
-class HolbertonClass {
+export class HolbertonClass {
   constructor(year, location) {
     /* eslint-disable no-underscore-dangle */
     this._year = year;
