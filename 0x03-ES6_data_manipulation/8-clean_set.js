@@ -2,6 +2,9 @@ export default function cleanSet(set, startString) {
   if (startString === '') {
     return '';
   }
+  if (typeof set !== 'object') {
+    return '';
+  }
   if (typeof startString !== 'string') {
     return '';
   }
