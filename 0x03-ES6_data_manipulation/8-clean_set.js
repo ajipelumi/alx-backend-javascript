@@ -2,16 +2,13 @@ export default function cleanSet(set, startString) {
   if (startString === '') {
     return '';
   }
-  if (typeof set !== 'object') {
-    return '';
-  }
-  if (typeof startString !== 'string') {
+  if (typeof startString !== 'string' || typeof set !== 'object') {
     return '';
   }
 
   const newSet = [];
   for (const item of set) {
-    if (item.startsWith(startString)) {
+    if (item && item.startsWith(startString)) {
       newSet.push(item.slice(startString.length));
     }
   }
