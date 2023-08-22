@@ -30,7 +30,7 @@ const countStudents = (path) => {
     }
     // Print each field
     for (const field in fields) {
-      if (field) {
+      if (fields[field]) {
         const list = fields[field];
         const count = list.length;
         console.log(`Number of students in ${field}: ${count}. List: ${list.join(', ')}`);
