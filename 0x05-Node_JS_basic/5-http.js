@@ -68,7 +68,7 @@ const app = http.createServer((req, res) => {
     fs.readFile(path, 'utf8', (err, data) => {
       if (err) {
         res.statusCode = 404;
-        res.end(`${message}Cannot load the database\n`);
+        res.end(`${message}Cannot load the database`);
       } else {
         readDatabase(data, res, message);
       }
